@@ -1,0 +1,9 @@
+TODO: A lot of things
+
+- Security
+- Database support
+- Input validation
+- Views
+- Helpers
+- URLs
+....a lot is needed. But, this is just a trial.
