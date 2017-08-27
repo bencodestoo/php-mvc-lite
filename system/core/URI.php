@@ -18,6 +18,6 @@ function _get_urlsegments(){
 	
 	//Get controller method params. 
 	$_params = array_values($url);
-	return (object) array('controller' => ucwords($_controller), 'method' => $_method, 'params' => $_params);
+	return (object) array('controller' => ucfirst($_controller), 'method' => $_method, 'params' => $_params);
 }
 ?>

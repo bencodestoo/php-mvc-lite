@@ -37,9 +37,13 @@
 	}
 	$method = "";
 	$method .= $_url->method;
-
+	
 	$controller = new $_url->controller();
-
+	
+	//SET UP CURRENT URLS
+	$controller->segment = $_url->controller;
+	$controller->func = $method;
+	$controller->args = implode(',', $_url->params);
 	// WORKING WITH PARAMS
 	if(isset($_url->params)){
 		call_user_func_array(array($controller, $method), $_url->params);
@@ -47,7 +51,4 @@
 	}else{
 		$controller->$method();
 	}
-
-	//~ $test = load_class('test');
-	//~ $test->echo_it('Bennit');
 ?>
